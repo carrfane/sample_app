@@ -1,12 +1,11 @@
-!!!DOCTYPE
+!!!
 %html
   %head
     %title
-      #{full_title(yield(:title))}
-    = csrf_meta_tags
-
-    = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload'
-    = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
-
+      = full_title(yield(:title))
+    = render 'layouts/rails-default'
   %body
-    = yield
+    = render 'layouts/header'
+    %div{:class => "container"}
+      = yield
+      = render 'layouts/footer'
