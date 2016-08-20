@@ -89,11 +89,11 @@ Rails.application.configure do
   host = 'infinite-beyond-69852.herokuapp.com'
   config.action_mailer.default_url_options = { host: host }
   ActionMailer::Base.smtp_settings = {
-    :address        => 'mail.visualartistics.sg',
+    :address        => 'smtp.sendgrid.net',
     :port           => '587',
     :authentication => :plain,
-    :user_name      => ENV['email_username'],
-    :password       => ENV['email_password'],
+    :user_name      => 'hectorgnr',
+    :password       => 'gnr63428',
     :domain         => 'heroku.com',
     :enable_starttls_auto => true
   }
