@@ -83,4 +83,17 @@ Rails.application.configure do
 
   # Do not dump schema after migrations.
   config.active_record.dump_schema_after_migration = false
+  #email configuration
+  config.action_mailer.raise_delivery_errors = true
+  config.action_mailer.delivery_method = :smtp
+  host = 'infinite-beyond-69852.herokuapp.com'
+  config.action_mailer.default_url_options = { host: host }
+  ActionMailer::Base.smtp_settings = {
+    :address        => 'mail.visualartistics.sg',
+    :port           => '587',
+    :authentication => :plain,
+    :user_name      => ENV['email_username'],
+    :password       => ENV['email_password'],
+    :domain         => 'heroku.com',
+    :enable_starttls_auto => true
 end

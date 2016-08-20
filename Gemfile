@@ -17,6 +17,7 @@ gem 'jquery-rails',            '4.1.1'
 gem 'turbolinks',              '5.0.0'
 gem 'jbuilder',                '2.4.1'
 gem 'haml-rails'
+gem 'figaro'
 
 group :development, :test do
   gem 'sqlite3', '1.3.11'
