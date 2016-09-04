@@ -1,0 +1,4 @@
+- @user ||= current_user
+.stats
+  = link_to "#{@user.following.count} following", following_user_path(@user), {id: "following", class: "stats"}
+  = link_to "#{@user.followers.count} followers", followers_user_path(@user), {id: "followers", class: "stats"}
